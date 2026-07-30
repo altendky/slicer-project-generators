@@ -1,8 +1,8 @@
 # Provenance Records
 
-This directory holds the named, version-controlled start, input review,
-feature-level evidence, release review, and provenance-set records required by
-the canonical
+This directory holds capability/upstream baseline, source-influence, licensing
+and compatibility, feature-level evidence, test, release-review, and
+provenance-set records required by the canonical
 [Provenance Policy](../docs/src/project/slicer-project-generator-provenance.md).
 See the repository [README](../README.md) for current capability status.
 

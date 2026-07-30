@@ -11,6 +11,15 @@ This repository owns target-derived generator implementation, its evidence and
 provenance records, target fixtures and schemas, generator package builds, and
 generator package release decisions.
 
+This repository exists to develop derivative generator implementations from
+each crate's named upstream AGPL reference project. Contributors may inspect and
+reference that project when working on the corresponding crate. Source-informed
+derivation is the expected provenance path, not an exceptional one. This policy
+records source influence and the obligations applicable to incorporation,
+repository publication, distribution, and release. It does not itself grant
+rights under upstream terms or replace review of the exact upstream revision
+and planned use.
+
 [`onshape-export`](https://github.com/altendky/onshape-export) owns the
 source-neutral generator protocol, the approved-generator manifest, runtime
 sandboxing, independent output validation and hashing, caching, generated
@@ -24,63 +33,58 @@ No service integration commit is pinned by this policy. Any future integration
 must record its own immutable service-side reference after the corresponding
 service changes exist.
 
-## Required Start And Input Gates
+## Capability And Upstream Baseline
 
-Before relevant upstream implementation source is accessed, or a
-source-informed, independently derived, or clean-room capability is begun:
+Assign each implemented capability a stable identifier and narrowly define its
+scope. Maintain a version-controlled provenance record under `provenance/` that
+identifies the destination crate, named upstream project or component,
+canonical URL, pinned revision, capability scope, consulted upstream
+references, source-influence classifications, and applicable licensing and
+compatibility records. Name the records that collect implementation,
+verification, terms, and release evidence.
 
-1. Assign a stable capability identifier and narrowly define the proposed work.
-2. Create a named source-access or capability-start record under `provenance/`
-   in a committed revision of this repository. The record must identify the
-   requester, participants and roles, reviewer, approver, target and pinned
-   revision, permitted inputs and path categories, purpose, isolated working
-   location, permitted provisional outputs, controls, and approval date.
-3. Obtain explicit approval in that committed record before the relevant access
-   or work. Temporary files, private notes, chat, pull-request discussion, and
-   uncommitted records do not satisfy this gate.
-4. Record each participant's prior and permitted source access and any
-   separation or communication controls.
-5. Assign provisional classifications and evidence kinds and name the records
-   that will collect implementation, verification, terms, and release evidence.
-6. Complete and approve the applicable input terms and license review described
-   below for every evidence or implementation-input category before that
-   category is accessed or used.
+The baseline may be developed alongside research and implementation and is not
+an authorization gate. This policy does not require advance approval for
+ordinary inspection or reference of the corresponding crate's named upstream
+project. Before affected upstream-derived implementation, schemas, fixtures, or
+evidence are pushed to a public branch, submitted for review, merged, or
+otherwise distributed, the baseline must identify their exact upstream
+component and revision, consulted references, and source-influence
+classifications. Resolve the governing license, copyright, attribution, notice,
+and destination-crate compatibility requirements applicable to that material.
+Record uncertainties and block the affected public incorporation or
+distribution until they are resolved.
 
-The start record and each terms review may be superseded only by a new,
-version-controlled record that preserves the earlier decision. Approval is
-specific to the named people, scope, target revision, inputs, and isolated
-location; it is not general permission to inspect other source or begin another
-capability. Upstream implementation must not be inspected merely to estimate
-work before these gates are met.
+Baseline and review records may be superseded only by new, version-controlled
+records that preserve the earlier record and identify their replacement. A
+baseline applies only to its named capability, destination crate, upstream
+component, and pinned revision.
 
-## Provisional Evidence-Completion Work
+## Development And Distribution Boundary
 
-After the approved start record and all reviews applicable to the inputs being
-used are complete, named participants may perform the following work only in
-the recorded isolated location:
+Normal development may include source-informed implementation, target-derived
+schemas and fixtures, builds, and tests for the crate's named reference project.
+Incomplete evidence and unverified compatibility claims must be described
+accurately.
 
-- Access approved source and other approved inputs within the recorded scope.
-- Create provisional implementation commits and target-derived schemas or
-  fixtures needed to establish evidence.
-- Build provisional generator packages and run fixtures and tests needed to
-  complete local implementation and validation records.
-
-This permission resolves the need to create immutable implementation and test
-evidence after access without treating provisional work as released. All such
-work and outputs must be conspicuously marked provisional and
-non-distributable. They must remain isolated from release channels and from the
-`onshape-export` production service.
-
-Until final records and reviews are complete, the capability and its outputs
-must not be advertised; generator packages must not be distributed or released;
-the service must not approve or run the generator; and fixtures, generated
-artifacts, or other outputs must not be published or used in production.
+Public source and evidence incorporation requires the applicable baseline,
+source-influence provenance, license compatibility, attribution, and notice
+requirements described above. Distribution of a generator package requires the
+complete immutable evidence, validation, provenance-set, and named release
+review described below. The service must not approve or run an unreleased
+generator, and generated-artifact publication and production use remain subject
+to the separate `onshape-export` review.
 
 ## Two-Level Taxonomy
 
 Every relationship among a capability and its implementation, constants,
 schemas, fixtures, tests, or behavioral claims has one classification and one
 matching evidence kind.
+
+Source-informed classifications are expected for derivative work in this
+repository. Independent and clean-room classifications apply only when those
+methods were actually used. The taxonomy records source influence; it does not
+rank one permitted method above another or determine license compatibility.
 
 The classifications are:
 
@@ -114,21 +118,22 @@ must be recorded under the matching source-informed evidence kind.
 
 ## Input Terms And License Review
 
-Before any category of material is accessed as evidence or used as an
-implementation input, a named, approved, version-controlled review must address
-that material, the planned use, every affected destination crate, and any
-planned retention or distribution. Categories include implementation source,
-specifications, documentation, EULAs, software, services, fixtures, schemas,
-observations, and captured or generated outputs.
+For each capability and affected destination crate, maintain a named,
+version-controlled review of the terms and license facts for upstream source
+and other material that is incorporated, retained, tested, published, or
+distributed. Identify the exact material and version, planned use, licenses,
+copyrights, exceptions, notices, and resulting attribution, compatibility,
+retention, modification, testing, and distribution requirements. Categories
+may include implementation source, specifications, documentation, EULAs,
+software, services, fixtures, schemas, observations, and captured or generated
+outputs.
 
-The minimum access needed to locate, retrieve, and review license texts, EULAs,
-access terms, copyright statements, exceptions, and notices is permitted solely
-to complete this gate. It must be limited to that legal and metadata material
-and recorded in the review. It does not permit inspection of implementation
-content, schemas, fixtures, behavior, or other substantive evidence before the
-approved start and input gates are complete. If governing material cannot be
-identified without substantive access, stop and obtain qualified review rather
-than treating the gate as satisfied.
+Access to a crate's named upstream source for ordinary research and development
+does not require advance approval under this policy. Known access restrictions
+or other applicable terms must still be observed. If governing material or the
+resulting obligations cannot be determined for a planned incorporation or
+distribution, obtain qualified review rather than treating the question as
+resolved.
 
 For implementation source, identify the exact target package or component and
 pinned revision and review governing licenses, copyrights, exceptions, access
@@ -137,17 +142,17 @@ files, symbols, and lines consulted are provenance references within that
 package-level review; file-specific terms and notices must be incorporated when
 applicable.
 
-For every other category, identify the exact version or immutable artifact and
-review all governing licenses, EULAs, service and access terms, confidentiality
-limits, copyright, exceptions, permissions to observe or capture behavior, and
-permissions to retain, modify, test, or distribute inputs and outputs. Public
-availability is not permission by itself.
+For every other category actually used, identify the exact version or immutable
+artifact and review applicable licenses, EULAs, service and access terms,
+confidentiality limits, copyright, exceptions, and permissions relevant to
+observing, capturing, retaining, modifying, testing, publishing, or distributing
+inputs and outputs. Public availability alone does not resolve those questions.
 
-An unresolved or adverse review blocks use of that input. It may require a new
-evidence plan, different isolation controls, changed crate licensing, omitted
-fixtures, additional notices, or qualified legal review. Required terms and
-notices must be retained and supplied with generator packages or fixtures where
-applicable.
+An unresolved or adverse review blocks the affected public incorporation,
+publication, distribution, or release. It may require a new evidence plan,
+specific access controls, changed crate licensing, omitted fixtures, additional
+notices, or qualified legal review. Required terms and notices must be retained
+and supplied with generator packages or fixtures where applicable.
 
 ## Evidence Requirements
 
@@ -159,13 +164,15 @@ applicable.
 - The target release or tag, if any, and full commit hash.
 - Repository-relative file, symbol when available, and exact relevant lines.
 - An immutable official permalink and a stated-algorithm content hash.
-- The approved source-access record and applicable terms and license review.
+- The capability/upstream baseline and applicable terms, license,
+  compatibility, attribution, and notice review.
 - A description of reuse, adaptation, or learned schema facts.
 - Destination crate, local paths and immutable commits when available,
   authorship, review, fixtures, tests, and exact validated target versions.
 
-Unresolved fields may be explicit in provisional records while isolated work
-generates the missing evidence. They must be resolved for generator release.
+Unresolved fields may be explicit during local development. Fields needed to
+identify and classify publicly incorporated material must be resolved before
+that incorporation; all required fields must be resolved for generator release.
 
 ### Independent Evidence
 
@@ -174,18 +181,19 @@ generates the missing evidence. They must be resolved for generator release.
 
 - Immutable official specification or documentation references where
   available, including versions, sections, stable identifiers, hashes when
-  obtainable, and their approved terms reviews.
+  obtainable, and their applicable terms reviews.
 - A reviewed explanation of the evidence basis when no immutable authoritative
   reference exists.
 - Reproducible experiment plans, inputs, observed outputs, results, dates,
   environments, and tool versions.
 - Fixture identifiers and hashes linked to experiments and tests.
-- Authorship, independent review, and participant source-access declarations.
+- Authorship, independent review, and a description of relevant source use.
 
 These records must not invent implementation-source references. Black-box
-observation and its fixtures remain subject to the start and input review gates.
+observation and its fixtures remain subject to applicable terms, provenance,
+publication, and distribution requirements.
 
-### Clean-Room Evidence
+### Clean-Room Evidence, When Used
 
 `clean_room` records must contain:
 
@@ -202,7 +210,10 @@ observation and its fixtures remain subject to the start and input review gates.
   and verification.
 
 The specification team's source access does not imply implementer access, but
-source-derived expression must not cross a prohibited boundary.
+source-derived expression must not cross a recorded clean-room boundary. These
+controls apply only when a capability deliberately uses clean-room evidence or
+an applicable review requires them; they are not requirements for ordinary
+source-informed derivative development.
 
 ## Schemas And Fixtures
 
@@ -212,17 +223,19 @@ constants, templates, or compatibility claims.
 
 Target-derived slicer schemas, serialized layouts, templates, and fixtures
 belong in this repository and require capability-level classification, evidence,
-input terms review, hashes, and release review. A target fixture used only for
-provisional testing is still an evidence input or output and remains
-non-publishable until its rights and final records permit publication.
+applicable terms review, hashes, and release review. Before publishing or
+distributing them, resolve their retention, attribution, notice, and publication
+requirements and retain the resulting evidence with the capability record.
 
 ## Local Implementation And Provenance Sets
 
-Each implemented relationship must eventually record repository-relative local
-paths, symbols or lines, full implementation commits, modifications when
-applicable, authors and reviewers with dates, fixture hashes, test identifiers
-and results, and exact target versions. Planned paths may appear in the approved
-start record; release evidence must replace them with immutable references.
+Before public incorporation, each implemented relationship must record its
+repository-relative local paths or symbols, modifications when applicable,
+authorship, upstream references, and source-influence classification. Release
+evidence must add full implementation commits, reviewers and dates, fixture
+hashes, test identifiers and results, and exact target versions. Planned paths
+may appear in the capability baseline but must be replaced with immutable
+references for release.
 
 Records are append-only review evidence. Corrections create a superseding record
 or provenance-set version and retain the earlier record.
@@ -236,8 +249,8 @@ terms, or compatibility results interchangeable.
 
 ## Generator Build And Release Review
 
-Restricted builds and tests are permitted only as described under Provisional
-Evidence-Completion Work. A distributable generator release requires:
+Builds and tests are ordinary development activities. A distributable generator
+release requires:
 
 - Final classifications and exactly matching evidence kinds for every covered
   relationship.

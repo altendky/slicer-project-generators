@@ -1,34 +1,27 @@
 # Source Provenance And Licensing
 
-This repository is the isolated AGPL-side project for slicer project generator
-work. The canonical generator-side source, evidence, implementation, build, and
-release rules are in
+This repository is the AGPL-side workspace for derivative slicer project
+generator implementations. Each workspace crate is intended to derive from its
+named upstream AGPL reference project. The canonical generator-side source,
+evidence, implementation, build, and release rules are in
 `docs/src/project/slicer-project-generator-provenance.md`.
 
 Each workspace crate declares its license in its `Cargo.toml` manifest.
 Repository-authored material outside the workspace crates is licensed under the
 root `LICENSE`.
 
-Do not inspect upstream slicer implementation source or begin any slicer
-capability work until the policy's approved, named, version-controlled start
-record and all applicable input terms and license reviews are complete. This
-applies to direct reuse, adapted work, schema facts, independently derived work,
-and clean-room work.
+Contributors may inspect and reference a crate's named upstream project while
+developing that crate. Record the exact upstream identity and revision,
+consulted files, source influence, and applicable licensing, copyright,
+attribution, notice, and compatibility facts in capability provenance. Resolve
+requirements applicable to affected material before public incorporation or
+distribution, and complete the policy's test, provenance, and release evidence
+before generator release. Clean-room separation or additional isolation
+controls apply only when deliberately selected or required by an applicable
+review.
 
-Before using any specification, documentation, EULA, fixture, software, source,
-or black-box observation as evidence or an implementation input, complete the
-policy's applicable terms and license review for each affected destination
-crate. For target-derived work, identify the exact target package or component
-and pinned revision, record its governing licenses, copyrights, exceptions, and
-notices, and preserve them as required. Record the exact upstream files used as
-references in the capability provenance; they do not require separate license
-metadata. The resulting review may require adjusting the destination crate's
-license declaration or repository notices.
-
-After those gates, only the policy's isolated, provisional, non-distributable
-evidence-completion work is permitted until final records and generator release
-review are complete. Service approval and generated-artifact publication remain
-separate responsibilities of
+Service approval and generated-artifact publication remain separate
+responsibilities of
 [`onshape-export`](https://github.com/altendky/onshape-export), governed by its
 pinned [normative integration policy][service-integration-policy] and
 [proposed generator contract][service-generator-contract]. Those service

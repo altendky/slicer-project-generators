@@ -8,19 +8,22 @@ Repository-authored support material outside the workspace crates is licensed
 under the same terms. The complete AGPL-3.0-only text is stored in the root
 `LICENSE`.
 
-Before accessing or using any evidence or implementation-input category,
-complete the named, version-controlled terms and license review required by the
-[Provenance Policy](slicer-project-generator-provenance.md). Reviews cover exact
-target packages and pinned revisions as well as specifications, documentation,
-EULAs, software access, services, schemas, fixtures, observations, and captured
-or generated outputs. The exact upstream files, symbols, and lines remain
-provenance references within the applicable package or component review.
+Each crate is intended to contain a derivative implementation of its named
+upstream AGPL reference project. Contributors may inspect and reference that
+project during ordinary research and development. For each implemented
+capability, identify the exact upstream package or component and pinned
+revision, then record applicable licenses, copyrights, exceptions, notices, and
+terms together with the destination-crate compatibility and distribution
+review. Record exact upstream files, symbols, and lines as capability
+provenance.
 
-Preserve all applicable terms, copyrights, exceptions, duties, and notices.
-Depending on the result, crate declarations, distribution plans, fixture
-handling, or repository notices may need adjustment. An unresolved review
-blocks use of its input. After approved start and input review, provisional work
-may proceed only under the policy's isolated, non-distributable controls; final
-review remains mandatory for generator release.
+`AGPL-3.0-only` in a crate manifest is that crate's declared license; it is not
+by itself a conclusion about compatibility with every future upstream-derived
+contribution. Preserve and satisfy applicable attribution, notice, source,
+modification, fixture, and distribution requirements before affected material
+is published or distributed. Unresolved questions block the affected public
+incorporation, distribution, or release, not ordinary source inspection.
+Generator release still requires final review under the
+[Provenance Policy](slicer-project-generator-provenance.md).
 
 Dependency and package-license policy is checked by `cargo deny`.

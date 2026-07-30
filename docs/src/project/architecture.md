@@ -11,13 +11,15 @@ packages:
 
 There is no shared crate or dependency. The repository's current capability
 status is maintained in the [README](../../../README.md). Package separation
-reserves boundaries; it does not establish compatibility, derivation, or
-licensing conclusions.
+preserves target boundaries. Each package is intended to contain a derivative
+implementation of its named upstream AGPL reference project, while its exact
+reference revision and compatibility conclusions remain capability-specific.
 
-Future capability architecture must follow the provenance policy before design
-or implementation starts. Shared behavior must not be assumed across targets,
-and no schema, format, fixture, or target-derived logic belongs in the scaffold
-without feature-level evidence and review.
+Shared behavior must not be assumed across targets. Target-derived schemas,
+formats, fixtures, and logic belong in the corresponding crate and repository
+provenance, not in the neutral scaffold or service protocol. Record them as
+capabilities are developed and complete applicable public-incorporation,
+distribution, and release review under the provenance policy.
 
 ## Project Boundary
 
