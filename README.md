@@ -13,11 +13,17 @@ nonzero status. See [Architecture](docs/src/project/architecture.md),
 [Provenance Policy](docs/src/project/slicer-project-generator-provenance.md)
 before proposing implementation work.
 
-The related [`onshape-export`](https://github.com/altendky/onshape-export)
-project owns the source-neutral protocol, runtime isolation, independent output
-validation, and generated-artifact publication. Generator release here and
-service approval there are separate reviews. No service integration commit is
-pinned yet.
+The stable counterpart repository is
+[`onshape-export`](https://github.com/altendky/onshape-export). Its pinned
+[normative integration policy][service-integration-policy] and
+[proposed generator contract][service-generator-contract] own the
+source-neutral protocol, generator approval, runtime sandbox, independent
+validation and hashing, cache, publication, and revocation. This repository's
+local [Provenance Policy](docs/src/project/slicer-project-generator-provenance.md)
+remains canonical for target source access, provenance, implementation, builds,
+and generator releases. Generator release here and service approval there are
+separate reviews; the later service documents do not revise the generator
+policy.
 
 ## Development
 
@@ -41,3 +47,6 @@ shellcheck scripts/check-scaffold.sh
 Each workspace crate declares its license in its `Cargo.toml` manifest.
 Repository-authored support material is licensed under AGPL-3.0-only; the full
 text is in [LICENSE](LICENSE).
+
+[service-integration-policy]: https://github.com/altendky/onshape-export/blob/6555aaf80b05e3bebdeb8b4a78dafcb8d84b3320/docs/src/project/slicer-project-generator-integration.md
+[service-generator-contract]: https://github.com/altendky/onshape-export/blob/6555aaf80b05e3bebdeb8b4a78dafcb8d84b3320/docs/src/project/slicer-project-generators.md
