@@ -2,22 +2,22 @@
 
 Contributions must comply with [AGENTS.md](AGENTS.md) and the normative
 [Provenance Policy](docs/src/project/slicer-project-generator-provenance.md).
-Do not inspect upstream slicer implementation source or begin target-derived,
-independent, or clean-room capability work until its approved, named,
-version-controlled start record and all applicable input terms and license
-reviews satisfy the policy. Only the isolated provisional work that policy
-expressly permits may precede final evidence and generator release review.
+Contributors may inspect and reference a crate's named upstream AGPL project
+when developing its derivative implementation. Record the exact upstream
+identity and revision, consulted references, source influence, and applicable
+licensing, copyright, attribution, notice, compatibility, and distribution
+facts in capability provenance.
 
 Contributions to each workspace crate are submitted under the license declared
 in that crate's `Cargo.toml`. Other repository-authored contributions are
-submitted under the root `LICENSE`. Before target-derived work, complete the
-crate-level terms and license review for the exact target package or component
-at a pinned revision and preserve all applicable exceptions and notices. Record
-the exact upstream files consulted in the capability provenance. That review
-may require the destination crate's license declaration or repository notices
-to change. Specifications, documentation, EULAs, fixtures, software, and
-black-box observations also require applicable terms and license review before
-use as evidence or implementation input.
+submitted under the root `LICENSE`. Before affected upstream-derived material
+is published, merged, or otherwise distributed, identify the exact target
+package or component at a pinned revision and resolve applicable license,
+copyright, compatibility, attribution, and notice requirements. Specifications,
+documentation, EULAs, fixtures, software, and black-box observations require
+review appropriate to their actual access, retention, incorporation, testing,
+publication, and distribution. Clean-room separation and special isolation
+controls apply only when chosen for the work or required by that review.
 
 This repository reviews target-derived implementation, evidence, fixtures,
 schemas, and generator package releases. The separate

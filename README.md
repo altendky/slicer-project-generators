@@ -1,7 +1,9 @@
 # Slicer Project Generators
 
-This repository is the isolated home for slicer project generator packages and
-their target-derived provenance.
+This repository is the home for derivative slicer project generator packages
+and their target-derived provenance. Each workspace crate corresponds to its
+named upstream AGPL reference project and records the exact upstream reference
+used by implemented capabilities.
 
 **Current status:** The repository contains three neutral command stubs and no
 implemented capabilities, slicer schemas, formats, fixtures, target-derived
@@ -11,7 +13,7 @@ Each command reports that it has no implemented capabilities and exits with a
 nonzero status. See [Architecture](docs/src/project/architecture.md),
 [Licensing](docs/src/project/licensing.md), and the normative
 [Provenance Policy](docs/src/project/slicer-project-generator-provenance.md)
-before proposing implementation work.
+when contributing implementation work.
 
 The stable counterpart repository is
 [`onshape-export`](https://github.com/altendky/onshape-export). Its pinned
