@@ -39,9 +39,16 @@ cargo fmt --all --check
 cargo clippy --workspace --all-targets -- -D warnings
 cargo test --workspace
 cargo deny check
-reuse lint
 actionlint
 shellcheck scripts/check-scaffold.sh
+while IFS= read -r -d '' path; do
+    case "${path,,}" in
+        *.md|*.markdown|*.mdown|*.mdx|*.mkd|*.mdwn|*.mkdn|*.mkdown)
+            printf '%s\0' "${path}"
+            ;;
+    esac
+done < <(git ls-files -z) \
+    | xargs -0 lychee --include-fragments --no-progress
 ```
 
 Each workspace crate declares its license in its `Cargo.toml` manifest.
