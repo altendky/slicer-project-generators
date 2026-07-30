@@ -23,6 +23,4 @@ blocks use of its input. After approved start and input review, provisional work
 may proceed only under the policy's isolated, non-distributable controls; final
 review remains mandatory for generator release.
 
-Repository file licensing is declared through `REUSE.toml`. `reuse lint` checks
-that declaration; dependency and package-license policy is checked separately by
-`cargo deny`.
+Dependency and package-license policy is checked by `cargo deny`.
