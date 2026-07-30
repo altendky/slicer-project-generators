@@ -29,4 +29,13 @@ After those gates, only the policy's isolated, provisional, non-distributable
 evidence-completion work is permitted until final records and generator release
 review are complete. Service approval and generated-artifact publication remain
 separate responsibilities of
-[`onshape-export`](https://github.com/altendky/onshape-export).
+[`onshape-export`](https://github.com/altendky/onshape-export), governed by its
+pinned [normative integration policy][service-integration-policy] and
+[proposed generator contract][service-generator-contract]. Those service
+documents own the neutral protocol, approval, sandbox, validation, cache,
+publication, and revocation; they do not revise this repository's canonical
+policy for target source access, provenance, implementation, builds, and
+generator releases.
+
+[service-integration-policy]: https://github.com/altendky/onshape-export/blob/6555aaf80b05e3bebdeb8b4a78dafcb8d84b3320/docs/src/project/slicer-project-generator-integration.md
+[service-generator-contract]: https://github.com/altendky/onshape-export/blob/6555aaf80b05e3bebdeb8b4a78dafcb8d84b3320/docs/src/project/slicer-project-generators.md
