@@ -1,0 +1,12 @@
+[package]
+name = "slicer-project-generator-bambu-studio"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "AGPL-3.0-only"
+publish = false
+autobins = false
+
+[[bin]]
+name = "slicer-project-generator-bambu-studio"
+path = "src/main.rs"
