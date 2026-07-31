@@ -1,8 +1,10 @@
 Slicer Project Generators
 Copyright (C) 2026 Slicer Project Generators contributors
 
-Before target-derived work, applicable upstream package or component licenses,
-copyrights, exceptions, and notices must be reviewed for each affected crate at
-pinned revisions and preserved as applicable. Exact upstream files consulted
-are tracked in capability provenance. Each resulting crate's license is
-declared in its `Cargo.toml` manifest.
+Before affected target-derived material is publicly incorporated or distributed,
+applicable upstream package or component licenses, copyrights, exceptions, and
+notices must be reviewed for each affected crate at pinned revisions and
+preserved as applicable. Ordinary local research and development may proceed as
+described by the canonical provenance policy. Exact upstream files consulted are
+tracked in capability provenance. Each resulting crate's license is declared in
+its `Cargo.toml` manifest.
