@@ -7,6 +7,16 @@ license = "AGPL-3.0-only"
 publish = false
 autobins = false
 
+[dependencies]
+zip = { version = "7.2.0", default-features = false }
+
+[dev-dependencies]
+quick-xml = "0.41.0"
+
+[lib]
+name = "slicer_project_generator_bambu_studio"
+path = "src/lib.rs"
+
 [[bin]]
 name = "slicer-project-generator-bambu-studio"
 path = "src/main.rs"
