@@ -1,19 +1,19 @@
 # Architecture
 
-The repository is a Rust virtual workspace with three independent binary
-packages:
+The repository is a Rust virtual workspace with three independent packages:
 
-| Package | Binary |
+| Package | Targets |
 | --- | --- |
-| `crates/bambu-studio` | `slicer-project-generator-bambu-studio` |
-| `crates/orca-slicer` | `slicer-project-generator-orca-slicer` |
-| `crates/prusa-slicer` | `slicer-project-generator-prusa-slicer` |
+| `crates/bambu-studio` | named-objects library and protocol-stub binary |
+| `crates/orca-slicer` | protocol-stub binary |
+| `crates/prusa-slicer` | protocol-stub binary |
 
-There is no shared crate or dependency. The repository's current capability
-status is maintained in the [README](../../../README.md). Package separation
-preserves target boundaries. Each package is intended to contain a derivative
+There is no shared crate. The repository's current capability status is
+maintained in the [README](../../../README.md). Package separation preserves
+target boundaries. Each package is intended to contain a derivative
 implementation of its named upstream AGPL reference project, while its exact
-reference revision and compatibility conclusions remain capability-specific.
+reference revision, dependencies, and compatibility conclusions remain
+capability-specific.
 
 Shared behavior must not be assumed across targets. Target-derived schemas,
 formats, fixtures, and logic belong in the corresponding crate and repository

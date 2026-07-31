@@ -27,3 +27,13 @@ Generator release still requires final review under the
 [Provenance Policy](slicer-project-generator-provenance.md).
 
 Dependency and package-license policy is checked by `cargo deny`.
+
+An official binary distribution of an AGPL-covered upstream program must
+preserve the applicable AGPL rights and may be used for internal compatibility
+testing under those rights. Record and hash the exact artifact, review embedded
+notices and any artifact-specific terms, do not invoke excluded non-free
+components, isolate it from the network, and do not redistribute it as project
+evidence. General website or service terms are not by themselves a substitute
+for, or a restriction on, the rights conveyed with the covered program. A
+concrete contradictory artifact-specific license or click-through must still be
+resolved before use.

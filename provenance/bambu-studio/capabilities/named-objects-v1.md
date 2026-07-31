@@ -15,8 +15,9 @@ when the project is opened by the validated target version. It does not define
 support-volume roles, slicer settings, service transport, publication, or a
 general Bambu Studio project implementation.
 
-Missing, empty, duplicate, or ambiguous object identity or name mappings must
-fail. The capability must not silently omit an object name, substitute an
+Missing, empty, duplicate, conflicting, or ambiguous object identity or name
+mappings fail. Duplicate display text remains permitted for distinct
+identities. The capability does not silently omit an object name, substitute an
 unrelated name, or collapse distinct logical objects.
 
 ## Upstream Baseline
@@ -56,42 +57,29 @@ The issue 3 baseline research consulted these exact references:
   [`Model.hpp` lines 346-352](https://github.com/bambulab/BambuStudio/blob/42d319c6692fa8e64790fddf0cdaafd2a4254bcc/src/libslic3r/Model.hpp#L346-L352),
   Git blob SHA-1 `6bdc01b502017968bfd76bab73ebdee2c9c9bb34`.
 
-These are baseline references, not complete implementation evidence. Actual use
-must be recorded in `BBL-NAMED-OBJECTS-SOURCE-INFLUENCE-v1` with exact relevant
-lines, symbols, a stated SHA-256 content-hash method and result, and a description
-of what was learned, reused, or adapted.
+These baseline references are completed by the source-influence record, which
+adds exact relevant lines, whole-file SHA-256 hashes, local relationships, and a
+description of what was learned or adapted.
 
-## Expected Relationships
+## Implemented Relationships
 
-These classifications are planning expectations only:
+The actual relationship-level classifications and evidence kinds are recorded
+in [`BBL-NAMED-OBJECTS-SOURCE-INFLUENCE-v1`](../source-influence/named-objects-v1.md).
 
-- Target project fields and layout that retain object names:
-  `schema_fact` with `source_informed_schema_fact` evidence.
-- Target identifiers or serialized constants learned from source:
-  `adapted_constant` with `source_informed` evidence.
-- Serialization logic structurally adapted from upstream:
-  `adapted_algorithm` with `source_informed` evidence.
-- Source text retained verbatim, if any: `direct_source_reuse` with
-  `source_informed` evidence.
-- Request validation established without relevant source influence, if any:
-  `independently_derived_behavior` with `independently_derived_behavior`
-  evidence.
+## Local And Evidence Records
 
-The final record must classify each implementation, constant, schema, fixture,
-test, and behavioral claim separately. Independent or clean-room evidence must
-not be claimed unless that method is actually used and documented.
-
-## Planned Local And Evidence Records
-
-- Source influence: `BBL-NAMED-OBJECTS-SOURCE-INFLUENCE-v1`
-- Implementation: `BBL-NAMED-OBJECTS-IMPLEMENTATION-v1`
-- Verification: `BBL-NAMED-OBJECTS-VERIFICATION-v1`
-- Notices: `BBL-MVP-NOTICES-v1`
-- Provenance set: `BBL-MVP-PROVENANCE-SET-v1`
+- [Source influence](../source-influence/named-objects-v1.md):
+  `BBL-NAMED-OBJECTS-SOURCE-INFLUENCE-v1`
+- [Implementation](../implementation/named-objects-v1.md):
+  `BBL-NAMED-OBJECTS-IMPLEMENTATION-v1`
+- [Verification](../verification/named-objects-v1.md):
+  `BBL-NAMED-OBJECTS-VERIFICATION-v1`
+- [Notices](../notices/named-objects-v1.md):
+  `BBL-NAMED-OBJECTS-NOTICES-v1`
+- Provenance set: `BBL-NAMED-OBJECTS-PROVENANCE-SET-v1`
 - Release review: `BBL-MVP-RELEASE-REVIEW-v1`
-- Planned implementation area: `crates/bambu-studio`
-
-These names do not assert that any record or implementation exists.
+- Implementation: `crates/bambu-studio` at
+  `383e480673d73096942cd11d04ebe597f467a05b`
 
 ## Verification Requirements
 
@@ -108,14 +96,13 @@ must demonstrate against Bambu Studio `2.7.1.62` at the pinned revision that:
 - Unsupported input and malformed geometry references fail without silently
   omitting objects or names.
 
-The verification record must identify the exact tested source build or official
-binary artifact and its hash. No binary, fixture, experiment, or result has been
-selected or produced by this baseline.
+The [verification record](../verification/named-objects-v1.md) identifies the
+exact official artifact, source-authored fixture, isolated environment, hashes,
+commands, load/save/reload observations, and results.
 
 ## Gates
 
-Affected public incorporation is blocked until actual relationships, consulted
-references, local paths, authorship, source influence, terms, attribution, and
-notices are complete. Release remains blocked until all planned records contain
-complete immutable evidence and named review. Service approval and generated
-artifact publication are separate and are not authorized by this baseline.
+Public incorporation requirements for revision 1 are recorded. Generator
+release remains blocked pending an actual package candidate, complete MVP
+release evidence, and named release review. Service approval and generated
+artifact publication are separate and are not authorized by these records.
