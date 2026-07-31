@@ -2,7 +2,7 @@
 ignore = []
 
 [licenses]
-allow = ["AGPL-3.0-only"]
+allow = ["AGPL-3.0-only", "MIT"]
 confidence-threshold = 1.0
 
 [bans]

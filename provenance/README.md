@@ -8,7 +8,8 @@ See the repository [README](../README.md) for current capability status.
 
 Current target records:
 
-- [Bambu Studio](bambu-studio/README.md)
+- [Bambu Studio](bambu-studio/README.md), including implemented named-objects
+  revision 1 evidence for target 2.7.1.62
 
 Do not create placeholders that imply an upstream source, license review,
 experiment, fixture, compatibility result, or approval that did not occur.

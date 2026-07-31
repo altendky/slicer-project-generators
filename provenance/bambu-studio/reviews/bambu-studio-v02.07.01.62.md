@@ -11,7 +11,7 @@
 - Destination license: `AGPL-3.0-only`
 - Applicable capabilities: `bambu-studio.named-objects` revision `1` and
   `bambu-studio.support-blocking-volumes` revision `1`
-- Review date: 2026-07-30
+- Review dates: 2026-07-30 and 2026-07-31
 
 This is a repository compliance record under the canonical provenance policy,
 not legal advice or a release approval.
@@ -112,23 +112,48 @@ immutable repository links and factual metadata; it does not incorporate GitHub
 website presentation or claim rights beyond the upstream license and the
 reviewed service access.
 
-No Bambu Studio binary, EULA-governed installer, project fixture, sample model,
-captured output, generated output, third-party specification, target service,
-or proprietary documentation was used or retained for this baseline. There is
-therefore no review result for any such material. Before later work uses any of
-those categories, its exact version or immutable artifact, terms, planned use,
-retention, modification, testing, publication, and distribution requirements
-must be added to a named review. Unreviewed use blocks affected public
-incorporation or distribution.
+### Official AppImage Compatibility Test Input
+
+The named-objects implementation used this exact official release asset for
+internal compatibility testing on 2026-07-31:
+
+- Asset ID: `449304146` (`RA_kwDOHoFoGs4ax9ZS`)
+- Name: `BambuStudio_ubuntu24.04-v02.07.01.62-20260616195227.AppImage`
+- Release URL: <https://github.com/bambulab/BambuStudio/releases/tag/v02.07.01.62>
+- Asset URL: <https://github.com/bambulab/BambuStudio/releases/download/v02.07.01.62/BambuStudio_ubuntu24.04-v02.07.01.62-20260616195227.AppImage>
+- Published and independently verified SHA-256:
+  `fa98b608532dfbbbb2b0931483aac41e57fb19c175a2cc7bd7d528d5e0fbb287`
+- Size: `227047928` bytes
+
+The project's approved determination is that this AppImage distributes the
+AGPL-covered Bambu Studio program and must preserve the applicable AGPL rights,
+including the right to run it for internal compatibility testing. The earlier
+general uncertainty about unrelated website or service terms is therefore not a
+blocker. The artifact was downloaded from the official GitHub release, hash
+verified before execution, extracted for notice inspection, and run only in
+containers with `--network none`. It is retained only in session temporary
+storage and is not incorporated into or redistributed with this repository.
+
+The extracted asset contains no installed networking-plugin binary. Its bundled
+homepage offers to download that optional plugin before login; the plugin was
+not downloaded, installed, or used. The optional Helio third-party service page
+contains an `Accept and proceed` privacy-policy notice; that service was not
+opened or accepted. No artifact-wide EULA, contradictory license, or required
+click-through was found. A future concrete artifact-specific contradictory fact
+would supersede this use determination and require review.
+
+The relevant embedded notice inventory found CKEditor 5's GPL-2.0-or-later or
+commercial dual-license notice and MIT notices for Swiper, Dom7, and SSR Window.
+Those bundled components were neither extracted into project source nor
+redistributed. Their notices remain in the temporary AppImage tree and do not
+change the AGPL source-derivation or internal-test conclusions here.
 
 ## Review Outcome And Limits
 
-The selected source baseline may support the two planned AGPL-3.0-only
-capabilities under the conditions above. Public implementation work remains
-blocked until relationship-level source influence, exact consulted lines,
-content hashes, local paths, authorship, notices, and any newly used input
-reviews are complete. Generator release remains blocked until immutable
-implementation, fixtures, tests, target-version results, provenance set,
-package identity, hashes, distribution review, and named release approval all
-exist. No implementation, test, fixture, artifact, qualified legal opinion, or
-release approval is asserted here.
+The selected source baseline supports the named-objects implementation under
+the conditions above. Its relationship-level source influence, exact consulted
+lines, content hashes, local paths, authorship, notices, and input reviews are
+complete. Generator release remains blocked until immutable package identity,
+hashes, distribution review, complete MVP evidence, and named release approval
+all exist. No generator release approval is asserted here, and the
+support-blocking-volumes capability remains outside this result.
