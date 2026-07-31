@@ -17,6 +17,7 @@ upstream component, and pinned revision that they name.
 | `BBL-NAMED-OBJECTS-IMPLEMENTATION-v1` | [Named objects implementation](implementation/named-objects-v1.md) | Immutable implementation commit recorded |
 | `BBL-NAMED-OBJECTS-VERIFICATION-v1` | [Named objects verification](verification/named-objects-v1.md) | Automated and exact-target compatibility results recorded |
 | `BBL-NAMED-OBJECTS-NOTICES-v1` | [Named objects notices](notices/named-objects-v1.md) | Source lineage and dependencies recorded |
+| `BBL-NAMED-OBJECTS-PROVENANCE-SET-v1` | [Named objects provenance set](provenance-sets/named-objects-v1.md) | Public-incorporation evidence complete; not released |
 
 Both capability baselines use Bambu Studio tag `v02.07.01.62`, commit
 `42d319c6692fa8e64790fddf0cdaafd2a4254bcc`.

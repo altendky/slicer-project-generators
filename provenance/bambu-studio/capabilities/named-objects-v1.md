@@ -76,7 +76,8 @@ in [`BBL-NAMED-OBJECTS-SOURCE-INFLUENCE-v1`](../source-influence/named-objects-v
   `BBL-NAMED-OBJECTS-VERIFICATION-v1`
 - [Notices](../notices/named-objects-v1.md):
   `BBL-NAMED-OBJECTS-NOTICES-v1`
-- Provenance set: `BBL-NAMED-OBJECTS-PROVENANCE-SET-v1`
+- [Provenance set](../provenance-sets/named-objects-v1.md):
+  `BBL-NAMED-OBJECTS-PROVENANCE-SET-v1`
 - Release review: `BBL-MVP-RELEASE-REVIEW-v1`
 - Implementation: `crates/bambu-studio` at
   `383e480673d73096942cd11d04ebe597f467a05b`
