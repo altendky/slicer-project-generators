@@ -252,6 +252,7 @@ fn rejects_missing_unsupported_and_conflicting_roles_atomically() {
     let base = printable("duplicate", "same", 0.0);
     let entries = [
         base.clone(),
+        base.clone(),
         ProjectGeometry {
             identity: Some("missing-role".to_owned()),
             name: None,
@@ -274,6 +275,12 @@ fn rejects_missing_unsupported_and_conflicting_roles_atomically() {
     let kinds = validation_kinds(&entries);
 
     assert!(kinds.contains(&ValidationErrorKind::MissingRole));
+    assert!(kinds.iter().any(|kind| matches!(
+        kind,
+        ValidationErrorKind::DuplicateIdentity {
+            first_object_index: 0
+        }
+    )));
     assert!(kinds.iter().any(|kind| matches!(
         kind,
         ValidationErrorKind::UnsupportedRole { role } if role == "support_enforcer"
