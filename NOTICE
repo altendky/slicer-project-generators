@@ -9,10 +9,12 @@ described by the canonical provenance policy. Exact upstream files consulted are
 tracked in capability provenance. Each resulting crate's license is declared in
 its `Cargo.toml` manifest.
 
-The Bambu Studio named-objects implementation derives from Bambu Studio, which
-is licensed under GNU Affero General Public License version 3 and is based on
-PrusaSlicer by Prusa Research, itself based on Slic3r by Alessandro Ranellucci
-and contributors. Exact source influence and attribution are recorded under
+The Bambu Studio named-objects and support-blocking-volumes implementations
+derive from Bambu Studio, which is licensed under GNU Affero General Public
+License version 3 and is based on PrusaSlicer by Prusa Research, itself based on
+Slic3r by Alessandro Ranellucci and contributors. Exact source influence and
+attribution, including consulted Bambu Studio contributors lane.wei,
+chunmao.guo, maosheng.wei, zhimin.zeng, and zhou.xu, are recorded under
 `provenance/bambu-studio/`.
 
 The Bambu Studio crate uses the MIT-licensed `zip` and `quick-xml` crates and

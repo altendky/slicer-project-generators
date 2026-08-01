@@ -4,7 +4,7 @@ The repository is a Rust virtual workspace with three independent packages:
 
 | Package | Targets |
 | --- | --- |
-| `crates/bambu-studio` | named-objects library and protocol-stub binary |
+| `crates/bambu-studio` | named-objects and support-blocking-volumes library; protocol-stub binary |
 | `crates/orca-slicer` | protocol-stub binary |
 | `crates/prusa-slicer` | protocol-stub binary |
 
