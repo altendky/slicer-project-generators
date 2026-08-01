@@ -6,9 +6,10 @@ named upstream AGPL reference project and records the exact upstream reference
 used by implemented capabilities.
 
 **Current status:** `crates/bambu-studio` implements the protocol-independent
-`bambu-studio.named-objects` capability revision 1 as a Rust library, validated
-against Bambu Studio 2.7.1.62. The repository has no released generator package
-or approved service integration.
+`bambu-studio.named-objects` and `bambu-studio.support-blocking-volumes`
+capabilities at revision 1 as a Rust library, validated against Bambu Studio
+2.7.1.62. The repository has no released generator package or approved service
+integration.
 
 All three commands remain protocol stubs that report no command-accessible
 capabilities and exit with a nonzero status. See

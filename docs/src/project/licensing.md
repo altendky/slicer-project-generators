@@ -28,6 +28,12 @@ Generator release still requires final review under the
 
 Dependency and package-license policy is checked by `cargo deny`.
 
+The implemented Bambu named-objects and support-blocking-volumes capabilities
+derive from pinned Bambu Studio `v02.07.01.62` source under AGPL version 3. Their
+relationship-level attribution, notices, dependency choices, compatibility
+tests, and public-incorporation conclusions are recorded under
+`provenance/bambu-studio/`. These records do not authorize a generator release.
+
 An official binary distribution of an AGPL-covered upstream program must
 preserve the applicable AGPL rights and may be used for internal compatibility
 testing under those rights. Record and hash the exact artifact, review embedded
