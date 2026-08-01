@@ -24,6 +24,7 @@ upstream component, and pinned revision that they name.
 | `BBL-SUPPORT-BLOCKING-VOLUMES-IMPLEMENTATION-v1` | [Support-blocking implementation](implementation/support-blocking-volumes-v1.md) | Immutable implementation commit recorded |
 | `BBL-SUPPORT-BLOCKING-VOLUMES-VERIFICATION-v1` | [Support-blocking verification](verification/support-blocking-volumes-v1.md) | Automated and exact-target compatibility results recorded |
 | `BBL-SUPPORT-BLOCKING-VOLUMES-NOTICES-v1` | [Support-blocking notices](notices/support-blocking-volumes-v1.md) | Source lineage and dependencies recorded |
+| `BBL-SUPPORT-BLOCKING-VOLUMES-PROVENANCE-SET-v1` | [Support-blocking provenance set](provenance-sets/support-blocking-volumes-v1.md) | Public-incorporation evidence complete; not released |
 
 Both capability baselines use Bambu Studio tag `v02.07.01.62`, commit
 `42d319c6692fa8e64790fddf0cdaafd2a4254bcc`.
@@ -34,22 +35,19 @@ The following IDs reserve the records required by later implementation,
 verification, and release work. These records do not yet exist, and listing
 them does not assert implementation, evidence, review, or approval:
 
-- `BBL-SUPPORT-BLOCKING-VOLUMES-PROVENANCE-SET-v1`
 - `BBL-MVP-PROVENANCE-SET-v1`
 - `BBL-MVP-RELEASE-REVIEW-v1`
 
-The support-blocking capability provenance set will resolve its established
-records to the immutable evidence commit. The later MVP provenance set and
-release review belong to issue #9 and must cover the complete named-object,
-support-blocking, protocol, and package candidate; capability evidence does not
-complete or authorize that release work.
+The later MVP provenance set and release review belong to issue #9 and must
+cover the complete named-object, support-blocking, protocol, and package
+candidate; capability evidence does not complete or authorize that release
+work.
 
 ## Current Gates
 
-The named-objects public-incorporation records are complete. Support-blocking
-implementation and validation evidence is complete; its immutable provenance
-set remains to be finalized. Generator distribution and release remain blocked
-pending a complete MVP candidate, package identity and hashes, distribution
-review, and named release approval. The protocol, service approval, deployment,
-and generated-artifact publication remain outside this repository and are not
+The named-objects and support-blocking public-incorporation records are
+complete. Generator distribution and release remain blocked pending a complete
+MVP candidate, package identity and hashes, distribution review, and named
+release approval. The protocol, service approval, deployment, and
+generated-artifact publication remain outside this repository and are not
 authorized.
