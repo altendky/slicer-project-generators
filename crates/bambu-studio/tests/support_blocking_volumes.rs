@@ -250,9 +250,12 @@ fn permits_models_without_blockers_and_optional_names() {
 #[test]
 fn rejects_missing_unsupported_and_conflicting_roles_atomically() {
     let base = printable("duplicate", "same", 0.0);
+    let duplicate_blocker = blocker("duplicate-blocker", "duplicate", "same blocker", 5.0);
     let entries = [
         base.clone(),
         base.clone(),
+        duplicate_blocker.clone(),
+        duplicate_blocker,
         ProjectGeometry {
             identity: Some("missing-role".to_owned()),
             name: None,
@@ -363,6 +366,68 @@ fn rejects_invalid_geometry_and_names_for_every_role() {
             triangle_index: 0,
             vertex_index: usize::MAX
         }
+    )));
+}
+
+#[test]
+fn rejects_empty_requests_and_incomplete_or_malformed_geometry() {
+    assert_eq!(validation_kinds(&[]), vec![ValidationErrorKind::NoObjects]);
+
+    let entries = [
+        ProjectGeometry {
+            identity: None,
+            name: None,
+            mesh: None,
+            role: Some(GeometryRole::PrintableModel),
+        },
+        ProjectGeometry {
+            identity: Some(String::new()),
+            name: None,
+            mesh: Some(IndexedTriangleMesh {
+                vertices: Vec::new(),
+                triangles: Vec::new(),
+            }),
+            role: Some(GeometryRole::PrintableModel),
+        },
+        ProjectGeometry::printable(
+            "non-finite",
+            IndexedTriangleMesh {
+                vertices: vec![[f64::NAN, 0.0, 0.0]],
+                triangles: vec![[0, 1, 2]],
+            },
+        ),
+        ProjectGeometry::printable(
+            "degenerate",
+            IndexedTriangleMesh {
+                vertices: vec![[0.0, 0.0, 0.0], [1.0, 0.0, 0.0], [2.0, 0.0, 0.0]],
+                triangles: vec![[0, 1, 2]],
+            },
+        ),
+    ];
+    let kinds = validation_kinds(&entries);
+
+    assert!(kinds.contains(&ValidationErrorKind::MissingIdentity));
+    assert!(kinds.contains(&ValidationErrorKind::MissingGeometry));
+    assert!(kinds.contains(&ValidationErrorKind::EmptyIdentity));
+    assert!(kinds.contains(&ValidationErrorKind::EmptyVertices));
+    assert!(kinds.contains(&ValidationErrorKind::EmptyTriangles));
+    assert!(kinds.iter().any(|kind| matches!(
+        kind,
+        ValidationErrorKind::NonFiniteCoordinate {
+            vertex_index: 0,
+            axis: 0
+        }
+    )));
+    assert!(kinds.iter().any(|kind| matches!(
+        kind,
+        ValidationErrorKind::VertexIndexOutOfBounds {
+            triangle_index: 0,
+            vertex_index: 1 | 2
+        }
+    )));
+    assert!(kinds.iter().any(|kind| matches!(
+        kind,
+        ValidationErrorKind::DegenerateTriangle { triangle_index: 0 }
     )));
 }
 
