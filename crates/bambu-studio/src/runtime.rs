@@ -587,12 +587,14 @@ fn settings_children<'a, 'input>(
 }
 
 fn atomic_file(path: &Path, bytes: &[u8]) -> Result<()> {
+    let filename = path
+        .file_name()
+        .context("output filename")?
+        .to_str()
+        .context("output filename encoding")?;
     let temporary = path.with_file_name(format!(
-        "{}.generator-tmp",
-        path.file_name()
-            .context("output filename")?
-            .to_str()
-            .context("output filename encoding")?
+        "generator-{}.tmp",
+        cache_key::hex_sha256(filename.as_bytes())
     ));
     ensure!(
         fs::symlink_metadata(&temporary).is_err(),

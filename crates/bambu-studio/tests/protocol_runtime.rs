@@ -63,8 +63,25 @@ fn configured_and_rigid_assembly_inputs_keep_distinct_paths_order_and_placements
                     3
                 );
             }
-            assert!(!temp.0.join("result.json.generator-tmp").exists());
-            assert!(!temp.0.join("outputs/project.3mf.generator-tmp").exists());
+            assert!(
+                !temp
+                    .0
+                    .join(format!(
+                        "generator-{}.tmp",
+                        cache_key::hex_sha256(b"result.json")
+                    ))
+                    .exists()
+            );
+            assert!(
+                !temp
+                    .0
+                    .join("outputs")
+                    .join(format!(
+                        "generator-{}.tmp",
+                        cache_key::hex_sha256(b"project.3mf")
+                    ))
+                    .exists()
+            );
             fs::remove_file(temp.0.join("outputs/project.3mf")).unwrap();
             fs::remove_file(temp.0.join("result.json")).unwrap();
             assert!(runtime::invoke(&temp.0, "request.json", "result.json", &package).unwrap());
@@ -470,23 +487,72 @@ fn anonymous_names_and_temporary_output_conflicts_are_handled_atomically() {
     fs::remove_file(temp.0.join("outputs/project.3mf")).unwrap();
     fs::remove_file(temp.0.join("result.json")).unwrap();
     fs::write(
-        temp.0.join("outputs/project.3mf.generator-tmp"),
+        temp.0.join("outputs").join(format!(
+            "generator-{}.tmp",
+            cache_key::hex_sha256(b"project.3mf")
+        )),
         b"preserve",
     )
     .unwrap();
     assert!(!runtime::invoke(&temp.0, "request.json", "result.json", &package).unwrap());
     assert!(!temp.0.join("outputs/project.3mf").exists());
     assert_eq!(
-        fs::read(temp.0.join("outputs/project.3mf.generator-tmp")).unwrap(),
+        fs::read(temp.0.join("outputs").join(format!(
+            "generator-{}.tmp",
+            cache_key::hex_sha256(b"project.3mf")
+        )))
+        .unwrap(),
         b"preserve"
     );
-    fs::remove_file(temp.0.join("outputs/project.3mf.generator-tmp")).unwrap();
+    fs::remove_file(temp.0.join("outputs").join(format!(
+        "generator-{}.tmp",
+        cache_key::hex_sha256(b"project.3mf")
+    )))
+    .unwrap();
     fs::remove_file(temp.0.join("result.json")).unwrap();
-    fs::write(temp.0.join("result.json.generator-tmp"), b"preserve").unwrap();
+    fs::write(
+        temp.0.join(format!(
+            "generator-{}.tmp",
+            cache_key::hex_sha256(b"result.json")
+        )),
+        b"preserve",
+    )
+    .unwrap();
     assert!(runtime::invoke(&temp.0, "request.json", "result.json", &package).is_err());
     assert!(!temp.0.join("outputs/project.3mf").exists());
     assert_eq!(
-        fs::read(temp.0.join("result.json.generator-tmp")).unwrap(),
+        fs::read(temp.0.join(format!(
+            "generator-{}.tmp",
+            cache_key::hex_sha256(b"result.json")
+        )))
+        .unwrap(),
         b"preserve"
     );
+}
+
+#[test]
+fn protocol_maximum_length_output_filename_succeeds() {
+    let temp = Temp::new();
+    let package = package();
+    let (mut request, mut manifest, settings) = fixture(&temp.0, &package, false, false);
+    request.output.path = format!("outputs/{}", "a".repeat(255));
+    bind(&temp.0, &mut request, &mut manifest, &settings);
+    assert!(runtime::invoke(&temp.0, "request.json", "result.json", &package).unwrap());
+    assert!(temp.0.join(request.output.path).is_file());
+}
+
+#[test]
+fn conflicting_relationship_content_type_override_is_rejected() {
+    let mut files = geometry::archive(&raw(&model("meter"), false)).unwrap();
+    let types = String::from_utf8(files["[Content_Types].xml"].clone()).unwrap();
+    files.insert(
+        "[Content_Types].xml".into(),
+        types
+            .replace(
+                "</Types>",
+                "<Override PartName=\"/_rels/.rels\" ContentType=\"wrong/type\"/></Types>",
+            )
+            .into_bytes(),
+    );
+    assert!(geometry::realize(&repack(files, false), &geometry::IDENTITY).is_err());
 }

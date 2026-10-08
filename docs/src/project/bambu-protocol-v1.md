@@ -43,10 +43,11 @@ The fixed request bindings are:
 
 Settings identity is computed using the unchanged service-owned settings-v2 JCS
 domain and normalized signed zeros. Input and output media types are `model/3mf`;
-settings use `application/json`. No protocol schema is extended. Optional source
-metadata permitted by protocol v1 is opaque: it never controls names, roles,
-geometry, association, or placement. Source selection and transform derivation
-remain service responsibilities.
+settings use `application/json`. No protocol schema is extended. Source identities,
+occurrence paths, producer references, filenames, and parent references permitted
+by protocol v1 are opaque: they never control generated names, roles, geometry,
+association, or placement. The explicit `displayName` is forwarded unchanged.
+Source selection and transform derivation remain service responsibilities.
 
 ## Raw Geometry Profile
 
@@ -71,8 +72,9 @@ nondegenerate triangles.
 Required extensions, materials, textures, external components/relationships,
 nonprintable build items, additional members, ZIP64, multipart/embedded ZIP
 directories, and unknown geometry elements/attributes are unsupported. Unsupported
-profile features produce structured `unsupportedRequest`; malformed data and
-resource limits produce `invalidInput`. No fields or transforms are silently
+geometry/extension features produce structured `unsupportedRequest`; rejected
+archive encodings, malformed data, and resource limits produce `invalidInput`.
+No fields or transforms are silently
 ignored. Optional XML language attributes and comments have no geometry semantics.
 
 | Resource | Bound |

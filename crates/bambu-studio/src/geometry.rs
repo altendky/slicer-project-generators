@@ -551,10 +551,12 @@ fn validate_content_types(bytes: &[u8], model: &str) -> Result<()> {
     let model_type = types
         .get(&format!("part:/{model}"))
         .or_else(|| types.get("ext:model"));
+    let rels_type = types
+        .get("part:/_rels/.rels")
+        .or_else(|| types.get("ext:rels"));
     ensure!(
         model_type == Some(&"application/vnd.ms-package.3dmanufacturing-3dmodel+xml")
-            && types.get("ext:rels")
-                == Some(&"application/vnd.openxmlformats-package.relationships+xml"),
+            && rels_type == Some(&"application/vnd.openxmlformats-package.relationships+xml"),
         "missing content type"
     );
     Ok(())
