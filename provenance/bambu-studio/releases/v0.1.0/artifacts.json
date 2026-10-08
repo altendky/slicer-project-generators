@@ -1,0 +1,36 @@
+{
+  "artifacts": [
+    {
+      "byteLength": 1354728,
+      "name": "bambu-studio-v0.1.0-x86_64-unknown-linux-gnu.tar.gz",
+      "sha256": "a9c859962d23de9812a28871fa6a80334b7543ab695b52db73ca2d91387c3d9c"
+    },
+    {
+      "byteLength": 8076180,
+      "name": "bambu-studio-v0.1.0-corresponding-source.tar.gz",
+      "sha256": "bcc3c15220f739b9df9c6b5a6b2422c05ac4c126a37e2e8c5a8640b3184535ae"
+    }
+  ],
+  "evidenceFiles": {
+    "build-inputs.json": "619e2bdf298ab323bd5f4cf59bf4972fd646ed96bc7643d2094393eefd3a296a",
+    "cli-results.json": "d0c54444fcc54923e4827441efb875686d7b21d818f6eda8c18a4dd911fba74b",
+    "dependencies.json": "1038599241d12d6c82f33201f1faee4608c60ec3fb4f91d32298d005ca6c842e",
+    "fixtures.json": "4eaf9c425d3f8ba8e6a2e374005b26316e6674b28be30aa1d9ca96304702e70c",
+    "identities.json": "f132eb51816f26107bce5650f018d894df75cd900a4c98d049c037a7f568de64",
+    "package-files.json": "dc44a33af2569215882cacb343c12f0c57b7ef41eff0247640533e8e2e465f77",
+    "source-files.json": "3ebadd91ceb851a0b5b6332fd8228dcfa373b271a0bfd288a3ff5277786eb63e",
+    "source-modes.json": "768fa76e9c263a079f514087abd11bbab6568b049ef3de76f7e770c7841c0653",
+    "target-results.json": "29498da998f931731d56aa9203424dcd0b74f532cb084472ead5fb67c9ece0cb"
+  },
+  "implementationCommit": "54a0fa1635f75039d6b858a95bbe803bb61103cf",
+  "releaseTag": "bambu-studio-v0.1.0",
+  "reproducibility": {
+    "binaryEqual": true,
+    "cliReportSha256": "d0c54444fcc54923e4827441efb875686d7b21d818f6eda8c18a4dd911fba74b",
+    "descriptorEqual": true,
+    "packageArchiveEqual": true,
+    "sourceArchiveEqual": true,
+    "testsPassed": 47,
+    "validationReportsEqual": true
+  }
+}

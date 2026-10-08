@@ -1,0 +1,325 @@
+{
+  "scriptSha256": "97ff6e72e6c01f6ae2e809afafa441b9bbc514f37c8073ad55438d7908cfe8c0",
+  "pythonVersion": "3.14.8 (main, Oct  1 2026, 21:01:09) [Clang 22.1.3 ]",
+  "comparisonToleranceMm": 1e-09,
+  "results": [
+    {
+      "fixture": "configured",
+      "passed": true,
+      "inputs": [
+        {
+          "identity": "object-0",
+          "path": "inputs/geometry-0.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        },
+        {
+          "identity": "object-1",
+          "path": "inputs/geometry-1.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        }
+      ],
+      "candidateSha256": "4eb23becc267a87ba0459307ecd58d53b0ecd35d2edff92ed130e044def1aefa",
+      "nativeSavedSha256": "493ff7a4e361112eee9ad88ec8cd58221bc5e2d949b8e233ac6e6224ac9cabd1",
+      "candidateModelSettingsSha256": null,
+      "nativeModelSettingsSha256": "5ce0ad20fe9eef7d6aa2a873b6078dd75e7316587aa22ce79ae602b1da57c15d",
+      "nativeProjectSettingsSha256": "6e228b758ee10da32f7c51d40ecbdee4e4b6d00498dc081e8d967a64b664b942",
+      "maxInputToCandidateDeltaMm": 0.0,
+      "maxCandidateToNativeDeltaMm": 0.0,
+      "associations": [
+        {
+          "printableIdentity": "object-0",
+          "members": [
+            {
+              "identity": "object-0",
+              "role": "normal_part",
+              "triangles": 4
+            }
+          ]
+        },
+        {
+          "printableIdentity": "object-1",
+          "members": [
+            {
+              "identity": "object-1",
+              "role": "normal_part",
+              "triangles": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "assembly",
+      "passed": true,
+      "inputs": [
+        {
+          "identity": "object-0",
+          "path": "inputs/geometry-0.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        },
+        {
+          "identity": "object-1",
+          "path": "inputs/geometry-1.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        }
+      ],
+      "candidateSha256": "878d7d45d4f212d2054b09f11dfaba483c67e571b2b5f6ca7bd93c0423bca642",
+      "nativeSavedSha256": "15ef424f06c7379c7c9d252ecef7b1a963f3e9bfe113275b6583f490137d6f34",
+      "candidateModelSettingsSha256": null,
+      "nativeModelSettingsSha256": "63b1ee0a655a8dfdd9b7d4bb922bfe4d2ac7a84f66208fe80954595915e0b2a7",
+      "nativeProjectSettingsSha256": "6e228b758ee10da32f7c51d40ecbdee4e4b6d00498dc081e8d967a64b664b942",
+      "maxInputToCandidateDeltaMm": 0.0,
+      "maxCandidateToNativeDeltaMm": 0.0,
+      "associations": [
+        {
+          "printableIdentity": "object-0",
+          "members": [
+            {
+              "identity": "object-0",
+              "role": "normal_part",
+              "triangles": 4
+            }
+          ]
+        },
+        {
+          "printableIdentity": "object-1",
+          "members": [
+            {
+              "identity": "object-1",
+              "role": "normal_part",
+              "triangles": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "configured-blockers",
+      "passed": true,
+      "inputs": [
+        {
+          "identity": "object-0",
+          "path": "inputs/geometry-0.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        },
+        {
+          "identity": "object-1",
+          "path": "inputs/geometry-1.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        },
+        {
+          "identity": "object-2",
+          "path": "inputs/geometry-2.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        },
+        {
+          "identity": "object-3",
+          "path": "inputs/geometry-3.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        }
+      ],
+      "candidateSha256": "84733edad4bad78236e2b23a78ca542b765891095f7d8977b77b1bf5c383c44c",
+      "nativeSavedSha256": "39604ee2866c9f618c91088a5e6d4ba07a843035dd3fc1a9469f2b9a870bdca3",
+      "candidateModelSettingsSha256": "b27bf7e70728aa09c8a09855b21d60773746a20dc8c771b2153e72b0ad8aa969",
+      "nativeModelSettingsSha256": "eb4d9e571ebd2b410a883ffe2d1014ef787fbeabd88253ece6ff7c53c764dc1b",
+      "nativeProjectSettingsSha256": "6e228b758ee10da32f7c51d40ecbdee4e4b6d00498dc081e8d967a64b664b942",
+      "maxInputToCandidateDeltaMm": 0.0,
+      "maxCandidateToNativeDeltaMm": 0.0,
+      "associations": [
+        {
+          "printableIdentity": "object-0",
+          "members": [
+            {
+              "identity": "object-0",
+              "role": "normal_part",
+              "triangles": 4
+            },
+            {
+              "identity": "object-2",
+              "role": "support_blocker",
+              "triangles": 4
+            },
+            {
+              "identity": "object-3",
+              "role": "support_blocker",
+              "triangles": 4
+            }
+          ]
+        },
+        {
+          "printableIdentity": "object-1",
+          "members": [
+            {
+              "identity": "object-1",
+              "role": "normal_part",
+              "triangles": 4
+            },
+            {
+              "identity": "object-2",
+              "role": "support_blocker",
+              "triangles": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "assembly-blockers",
+      "passed": true,
+      "inputs": [
+        {
+          "identity": "object-0",
+          "path": "inputs/geometry-0.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        },
+        {
+          "identity": "object-1",
+          "path": "inputs/geometry-1.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        },
+        {
+          "identity": "object-2",
+          "path": "inputs/geometry-2.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        },
+        {
+          "identity": "object-3",
+          "path": "inputs/geometry-3.3mf",
+          "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65",
+          "byteLength": 870
+        }
+      ],
+      "candidateSha256": "9e483c26b6c6ac011b161ad7ee417d2ffb8c2e7ef567d8c23cd1ce6f67881d00",
+      "nativeSavedSha256": "08e317eb154cd35c2e6ee6b7d96347708dfea44d39faa781208723317da6c617",
+      "candidateModelSettingsSha256": "b27bf7e70728aa09c8a09855b21d60773746a20dc8c771b2153e72b0ad8aa969",
+      "nativeModelSettingsSha256": "526e6af8f356a0522e7d429e12c4641b74d1ec999444dc2b96b85e3ccf989e30",
+      "nativeProjectSettingsSha256": "6e228b758ee10da32f7c51d40ecbdee4e4b6d00498dc081e8d967a64b664b942",
+      "maxInputToCandidateDeltaMm": 0.0,
+      "maxCandidateToNativeDeltaMm": 1.4210854715202004e-14,
+      "associations": [
+        {
+          "printableIdentity": "object-0",
+          "members": [
+            {
+              "identity": "object-0",
+              "role": "normal_part",
+              "triangles": 4
+            },
+            {
+              "identity": "object-2",
+              "role": "support_blocker",
+              "triangles": 4
+            },
+            {
+              "identity": "object-3",
+              "role": "support_blocker",
+              "triangles": 4
+            }
+          ]
+        },
+        {
+          "printableIdentity": "object-1",
+          "members": [
+            {
+              "identity": "object-1",
+              "role": "normal_part",
+              "triangles": 4
+            },
+            {
+              "identity": "object-2",
+              "role": "support_blocker",
+              "triangles": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "assembly-internal-blockers",
+      "passed": true,
+      "inputs": [
+        {
+          "identity": "object-0",
+          "path": "inputs/geometry-0.3mf",
+          "sha256": "4da5e81dbe88046d1ba90df42a98a94288d501adf25e3d8481a9f8158ee32393",
+          "byteLength": 919
+        },
+        {
+          "identity": "object-1",
+          "path": "inputs/geometry-1.3mf",
+          "sha256": "4da5e81dbe88046d1ba90df42a98a94288d501adf25e3d8481a9f8158ee32393",
+          "byteLength": 919
+        },
+        {
+          "identity": "object-2",
+          "path": "inputs/geometry-2.3mf",
+          "sha256": "4da5e81dbe88046d1ba90df42a98a94288d501adf25e3d8481a9f8158ee32393",
+          "byteLength": 919
+        },
+        {
+          "identity": "object-3",
+          "path": "inputs/geometry-3.3mf",
+          "sha256": "4da5e81dbe88046d1ba90df42a98a94288d501adf25e3d8481a9f8158ee32393",
+          "byteLength": 919
+        }
+      ],
+      "candidateSha256": "755c23d43e93092125af6d661da8b6821805b13f15e9eed751bc5e3a92933918",
+      "nativeSavedSha256": "528f5d6d59e7da122b280f972e4410cc76ef60012b0d7acff2d2287d9704f550",
+      "candidateModelSettingsSha256": "b27bf7e70728aa09c8a09855b21d60773746a20dc8c771b2153e72b0ad8aa969",
+      "nativeModelSettingsSha256": "833ceb5618723400be80852b2155b1ac2b4fdb3f80a333d7eca2bb65a6f55540",
+      "nativeProjectSettingsSha256": "6e228b758ee10da32f7c51d40ecbdee4e4b6d00498dc081e8d967a64b664b942",
+      "maxInputToCandidateDeltaMm": 0.0,
+      "maxCandidateToNativeDeltaMm": 1.4210854715202004e-14,
+      "associations": [
+        {
+          "printableIdentity": "object-0",
+          "members": [
+            {
+              "identity": "object-0",
+              "role": "normal_part",
+              "triangles": 8
+            },
+            {
+              "identity": "object-2",
+              "role": "support_blocker",
+              "triangles": 8
+            },
+            {
+              "identity": "object-3",
+              "role": "support_blocker",
+              "triangles": 8
+            }
+          ]
+        },
+        {
+          "printableIdentity": "object-1",
+          "members": [
+            {
+              "identity": "object-1",
+              "role": "normal_part",
+              "triangles": 8
+            },
+            {
+              "identity": "object-2",
+              "role": "support_blocker",
+              "triangles": 8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "earlierNoPresetReload": "Separate known failure; this script verifies preset-roundtrip.3mf only"
+}

@@ -9,8 +9,10 @@ used by implemented capabilities.
 `bambu-studio.named-objects` and `bambu-studio.support-blocking-volumes`
 capabilities at revision 1 as a Rust library and a protocol-v1 runtime consuming
 raw Geometry 3MF and generator-settings v2, validated against Bambu Studio
-2.7.1.62. The repository has no released generator package or approved service
-integration.
+2.7.1.62. The reproducible 0.1.0 package, complete corresponding source and
+named release approval are documented in the
+[release records](provenance/bambu-studio/releases/v0.1.0/review.md).
+Service integration requires its separate approval.
 
 The Bambu command requires hash-bound package metadata and implements atomic
 candidate/result success with final target-aware self-validation. See
