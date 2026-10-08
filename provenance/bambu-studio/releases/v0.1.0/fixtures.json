@@ -1,0 +1,196 @@
+{
+  "assembly": {
+    "inputs/geometry-0.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/geometry-1.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/manifest.json": {
+      "byteLength": 1510,
+      "sha256": "3433f1c02edc5b95046f0bdae6e50f6579c829a9612f7ac9317ae42eea24b849"
+    },
+    "inputs/settings.json": {
+      "byteLength": 262,
+      "sha256": "7765199cf2645be3c0b2524646cdb0f0566f54c322c440e62fbbbccc77e9c672"
+    },
+    "outputs/project.3mf": {
+      "byteLength": 1890,
+      "sha256": "878d7d45d4f212d2054b09f11dfaba483c67e571b2b5f6ca7bd93c0423bca642"
+    },
+    "preset-roundtrip.3mf": {
+      "byteLength": 10051,
+      "sha256": "15ef424f06c7379c7c9d252ecef7b1a963f3e9bfe113275b6583f490137d6f34"
+    },
+    "request.json": {
+      "byteLength": 1807,
+      "sha256": "ae01de053bf301cbfefbe529eb634550419892b397cd85c05e32f16796b1a040"
+    },
+    "result.json": {
+      "byteLength": 1278,
+      "sha256": "5ec6aa0bcc8fc1c4cf0ba4c2962ad80548657cdfa82ab4fc9a7f945e9217a299"
+    }
+  },
+  "assembly-blockers": {
+    "inputs/geometry-0.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/geometry-1.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/geometry-2.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/geometry-3.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/manifest.json": {
+      "byteLength": 2404,
+      "sha256": "7b502deba6ec34c55ebc0fd8b377d8886d2fa518a15d8ffcdf0589643f24a4f5"
+    },
+    "inputs/settings.json": {
+      "byteLength": 608,
+      "sha256": "3c5dc473351fd6c251436911a63e6927fb270430c37d141a2fd5c7ee3735a879"
+    },
+    "outputs/project.3mf": {
+      "byteLength": 4283,
+      "sha256": "9e483c26b6c6ac011b161ad7ee417d2ffb8c2e7ef567d8c23cd1ce6f67881d00"
+    },
+    "preset-roundtrip.3mf": {
+      "byteLength": 10209,
+      "sha256": "08e317eb154cd35c2e6ee6b7d96347708dfea44d39faa781208723317da6c617"
+    },
+    "request.json": {
+      "byteLength": 1807,
+      "sha256": "a5e56f767dfd6e431ca4928df51bbcee1c2bdf18b94471292a668109e5fee0ff"
+    },
+    "result.json": {
+      "byteLength": 1278,
+      "sha256": "7cf01f6d581ef027096928023654c7dea65315bea9c6ce2d540b8252fa3b37a9"
+    }
+  },
+  "assembly-internal-blockers": {
+    "inputs/geometry-0.3mf": {
+      "byteLength": 919,
+      "sha256": "4da5e81dbe88046d1ba90df42a98a94288d501adf25e3d8481a9f8158ee32393"
+    },
+    "inputs/geometry-1.3mf": {
+      "byteLength": 919,
+      "sha256": "4da5e81dbe88046d1ba90df42a98a94288d501adf25e3d8481a9f8158ee32393"
+    },
+    "inputs/geometry-2.3mf": {
+      "byteLength": 919,
+      "sha256": "4da5e81dbe88046d1ba90df42a98a94288d501adf25e3d8481a9f8158ee32393"
+    },
+    "inputs/geometry-3.3mf": {
+      "byteLength": 919,
+      "sha256": "4da5e81dbe88046d1ba90df42a98a94288d501adf25e3d8481a9f8158ee32393"
+    },
+    "inputs/manifest.json": {
+      "byteLength": 2404,
+      "sha256": "c21f9828dcafdfc5757d004d6562a24c0bc76a535ddfe83c56da01b93fdea1d6"
+    },
+    "inputs/settings.json": {
+      "byteLength": 608,
+      "sha256": "3c5dc473351fd6c251436911a63e6927fb270430c37d141a2fd5c7ee3735a879"
+    },
+    "outputs/project.3mf": {
+      "byteLength": 5702,
+      "sha256": "755c23d43e93092125af6d661da8b6821805b13f15e9eed751bc5e3a92933918"
+    },
+    "preset-roundtrip.3mf": {
+      "byteLength": 10300,
+      "sha256": "528f5d6d59e7da122b280f972e4410cc76ef60012b0d7acff2d2287d9704f550"
+    },
+    "request.json": {
+      "byteLength": 1807,
+      "sha256": "0e999912d095df5204a96da6035c4b8dbe50c68a18be8c38c528bd81e80e9609"
+    },
+    "result.json": {
+      "byteLength": 1278,
+      "sha256": "fcb27804e91c15f67f93703e5a02b60e981bcaaef71088b52eb1fc6603ade272"
+    }
+  },
+  "configured": {
+    "inputs/geometry-0.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/geometry-1.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/manifest.json": {
+      "byteLength": 1510,
+      "sha256": "3433f1c02edc5b95046f0bdae6e50f6579c829a9612f7ac9317ae42eea24b849"
+    },
+    "inputs/settings.json": {
+      "byteLength": 258,
+      "sha256": "de383dceb30a52ba16e4d7f878194356f9b4d64d80fa6797f987b375df089d37"
+    },
+    "outputs/project.3mf": {
+      "byteLength": 1887,
+      "sha256": "4eb23becc267a87ba0459307ecd58d53b0ecd35d2edff92ed130e044def1aefa"
+    },
+    "preset-roundtrip.3mf": {
+      "byteLength": 10039,
+      "sha256": "493ff7a4e361112eee9ad88ec8cd58221bc5e2d949b8e233ac6e6224ac9cabd1"
+    },
+    "request.json": {
+      "byteLength": 1807,
+      "sha256": "7d1f27fb9f784e9c55f2d2cd8d0d874efff4776c378a7e8df10d3a8dd5955a73"
+    },
+    "result.json": {
+      "byteLength": 1278,
+      "sha256": "b8da2b4c5e02be07a7c6a89b6ce480e64fb53298cc9baccd41ebb01784ac2c58"
+    }
+  },
+  "configured-blockers": {
+    "inputs/geometry-0.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/geometry-1.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/geometry-2.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/geometry-3.3mf": {
+      "byteLength": 870,
+      "sha256": "7e5df15ca3f538b9283405ad5ed374e256a00799a0dd16fc29ce62f339b3df65"
+    },
+    "inputs/manifest.json": {
+      "byteLength": 2404,
+      "sha256": "7b502deba6ec34c55ebc0fd8b377d8886d2fa518a15d8ffcdf0589643f24a4f5"
+    },
+    "inputs/settings.json": {
+      "byteLength": 584,
+      "sha256": "ae3c2696056f141360447b318e5c5705914c39f936e2c9bf3938871b9cf77217"
+    },
+    "outputs/project.3mf": {
+      "byteLength": 4187,
+      "sha256": "84733edad4bad78236e2b23a78ca542b765891095f7d8977b77b1bf5c383c44c"
+    },
+    "preset-roundtrip.3mf": {
+      "byteLength": 10164,
+      "sha256": "39604ee2866c9f618c91088a5e6d4ba07a843035dd3fc1a9469f2b9a870bdca3"
+    },
+    "request.json": {
+      "byteLength": 1807,
+      "sha256": "1f7bd5e606f21be745611c0ddbf3f1190cc00742249b267e973886cef8203086"
+    },
+    "result.json": {
+      "byteLength": 1278,
+      "sha256": "4a88c0843ed0cfb36e1c03ac398f4968d33a7f7d8161b0a692d4f71494e3d7f3"
+    }
+  }
+}

@@ -29,7 +29,7 @@ upstream component, and pinned revision that they name.
 Both capability baselines use Bambu Studio tag `v02.07.01.62`, commit
 `42d319c6692fa8e64790fddf0cdaafd2a4254bcc`.
 
-## Planned Records
+## Protocol And Release Records
 
 Protocol v1 implementation is completed by the
 [protocol baseline](capabilities/protocol-v1.md),
@@ -40,23 +40,17 @@ Protocol v1 implementation is completed by the
 earlier records, identifies immutable runtime commits, and records five complete
 exact-target export/reload and independent geometry comparisons.
 
-The following IDs reserve the records required by later implementation,
-verification, and release work. These records do not yet exist, and listing
-them does not assert implementation, evidence, review, or approval:
-
-- `BBL-MVP-PROVENANCE-SET-v1`
-- `BBL-MVP-RELEASE-REVIEW-v1`
-
-The later MVP provenance set and release review belong to issue #9 and must
-cover the complete named-object, support-blocking, protocol, and package
-candidate; capability evidence does not complete or authorize that release
-work.
+Issue #9 supplies the aggregate
+[`BBL-MVP-PROVENANCE-SET-v1`](provenance-sets/mvp-v1.md),
+[`BBL-MVP-RELEASE-REVIEW-v1`](releases/v0.1.0/review.md),
+[distribution review](releases/v0.1.0/distribution.md), and
+[reproducible build/compatibility evidence](releases/v0.1.0/verification.md).
+These release-only supplements preserve all earlier records and bind both
+capabilities and the protocol runtime to the exact package bytes.
 
 ## Current Gates
 
 The named-objects and support-blocking public-incorporation records are
-complete. Generator distribution and release remain blocked pending a complete
-MVP candidate, package identity and hashes, distribution review, and named
-release approval. The protocol, service approval, deployment, and
-generated-artifact publication remain outside this repository and are not
-authorized.
+complete. The named release review records the 0.1.0 package decision.
+Service approval, deployment, cache use, generated-artifact publication and
+production use remain separate service-side responsibilities.
