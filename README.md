@@ -5,14 +5,17 @@ and their target-derived provenance. Each workspace crate corresponds to its
 named upstream AGPL reference project and records the exact upstream reference
 used by implemented capabilities.
 
-**Current status:** `crates/bambu-studio` implements the protocol-independent
+**Current status:** `crates/bambu-studio` implements the
 `bambu-studio.named-objects` and `bambu-studio.support-blocking-volumes`
-capabilities at revision 1 as a Rust library, validated against Bambu Studio
+capabilities at revision 1 as a Rust library and a protocol-v1 runtime consuming
+raw Geometry 3MF and generator-settings v2, validated against Bambu Studio
 2.7.1.62. The repository has no released generator package or approved service
 integration.
 
-All three commands remain protocol stubs that report no command-accessible
-capabilities and exit with a nonzero status. See
+The Bambu command requires hash-bound package metadata and implements atomic
+candidate/result success with final target-aware self-validation. See
+[Bambu runtime](docs/src/project/bambu-protocol-v1.md). Orca and Prusa remain
+protocol stubs. See
 [Architecture](docs/src/project/architecture.md),
 [Licensing](docs/src/project/licensing.md), and the normative
 [Provenance Policy](docs/src/project/slicer-project-generator-provenance.md)

@@ -4,7 +4,7 @@ The repository is a Rust virtual workspace with three independent packages:
 
 | Package | Targets |
 | --- | --- |
-| `crates/bambu-studio` | named-objects and support-blocking-volumes library; protocol-stub binary |
+| `crates/bambu-studio` | named-objects and support-blocking-volumes library; protocol-v1/settings-v2 binary |
 | `crates/orca-slicer` | protocol-stub binary |
 | `crates/prusa-slicer` | protocol-stub binary |
 
@@ -20,6 +20,10 @@ formats, fixtures, and logic belong in the corresponding crate and repository
 provenance, not in the neutral scaffold or service protocol. Record them as
 capabilities are developed and complete applicable public-incorporation,
 distribution, and release review under the provenance policy.
+
+The [Bambu runtime](bambu-protocol-v1.md) retains unchanged copies of neutral
+schemas and adapts their service-owned MIT validator. Target parsing, placement,
+capability dispatch, and self-validation remain inside the Bambu crate.
 
 ## Project Boundary
 
