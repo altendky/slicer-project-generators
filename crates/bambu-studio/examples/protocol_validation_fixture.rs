@@ -21,12 +21,22 @@ fn main() {
         ("assembly", false, true),
         ("configured-blockers", true, false),
         ("assembly-blockers", true, true),
+        ("assembly-internal-blockers", true, true),
     ] {
         let dir = destination.join(name);
         fs::create_dir(&dir).unwrap();
         let (mut request, mut manifest, mut settings) =
             common::fixture(&dir, &package, blockers, assembly);
-        let bytes = common::raw(&common::model("centimeter"), true);
+        let model = if name == "assembly-internal-blockers" {
+            format!(
+                r#"<model xmlns="{}" unit="centimeter"><resources><object id="1">{}</object><object id="2"><components><component objectid="1" transform="1 0 0 0 1 0 0 0 1 2 0 0"/></components></object></resources><build><item objectid="2" transform="0 1 0 -1 0 0 0 0 1 0 3 0"/><item objectid="1"/></build></model>"#,
+                geometry::CORE,
+                common::mesh_xml()
+            )
+        } else {
+            common::model("centimeter")
+        };
+        let bytes = common::raw(&model, true);
         for object in &mut manifest.objects {
             fs::write(dir.join(&object.retained_content.path), &bytes).unwrap();
             object.retained_content.sha256 = cache_key::hex_sha256(&bytes);
@@ -39,12 +49,14 @@ fn main() {
             }
         }
         // The leaf resource is 10 mm; placements are neutral meters.
-        assert_eq!(
-            geometry::realize(&bytes, &geometry::IDENTITY)
-                .unwrap()
-                .vertices[1],
-            [10., 0., 0.]
-        );
+        if name != "assembly-internal-blockers" {
+            assert_eq!(
+                geometry::realize(&bytes, &geometry::IDENTITY)
+                    .unwrap()
+                    .vertices[1],
+                [10., 0., 0.]
+            );
+        }
         common::bind(&dir, &mut request, &mut manifest, &settings);
         fs::copy(&binary, dir.join("slicer-project-generator-bambu-studio")).unwrap();
         fs::write(

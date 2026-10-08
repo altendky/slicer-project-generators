@@ -31,6 +31,15 @@ Both capability baselines use Bambu Studio tag `v02.07.01.62`, commit
 
 ## Planned Records
 
+Protocol v1 implementation is completed by the
+[protocol baseline](capabilities/protocol-v1.md),
+[source influence](source-influence/protocol-v1.md),
+[terms and dependencies](reviews/protocol-v1.md),
+[protocol provenance set](provenance-sets/protocol-v1.md), and
+[verification supplement](verification/protocol-v1.md). The supplement preserves
+earlier records, identifies immutable runtime commits, and records five complete
+exact-target export/reload and independent geometry comparisons.
+
 The following IDs reserve the records required by later implementation,
 verification, and release work. These records do not yet exist, and listing
 them does not assert implementation, evidence, review, or approval:
