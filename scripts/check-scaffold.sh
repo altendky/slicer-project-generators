@@ -35,7 +35,10 @@ if ! jq -e '
     and any(
         .packages[];
         .name == "slicer-project-generator-bambu-studio"
-        and ([.dependencies[].name] | sort) == ["quick-xml", "zip"]
+        and ([.dependencies[].name] | sort) == [
+            "anyhow", "quick-xml", "roxmltree", "serde", "serde_jcs",
+            "serde_json", "sha2", "thiserror", "zip"
+        ]
         and any(.targets[]; .kind == ["lib"])
         and any(.targets[]; .kind == ["bin"] and .name == "slicer-project-generator-bambu-studio")
     )
@@ -58,7 +61,11 @@ do
         exit 1
     fi
 
-    expected="${package} has no implemented capabilities"
+    if [[ "${package}" == slicer-project-generator-bambu-studio ]]; then
+        expected='usage: slicer-project-generator-bambu-studio --request request.json --result result.json'
+    else
+        expected="${package} has no implemented capabilities"
+    fi
     if [[ "${output}" != "${expected}" ]]; then
         printf 'error: unexpected diagnostic from %s: %s\n' \
             "${package}" "${output}" >&2
@@ -66,4 +73,4 @@ do
     fi
 done
 
-printf 'Workspace metadata, Bambu library, and protocol stubs are valid.\n'
+printf 'Workspace metadata, Bambu runtime, and remaining protocol stubs are valid.\n'

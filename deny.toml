@@ -4,6 +4,11 @@ ignore = []
 [licenses]
 allow = ["AGPL-3.0-only", "MIT"]
 confidence-threshold = 1.0
+exceptions = [
+    { name = "ryu-js", version = "=0.2.2", allow = ["BSL-1.0"] },
+    { name = "unicode-ident", version = "=1.0.26", allow = ["Unicode-3.0"] },
+    { name = "zlib-rs", version = "=0.6.8", allow = ["Zlib"] },
+]
 
 [bans]
 multiple-versions = "deny"

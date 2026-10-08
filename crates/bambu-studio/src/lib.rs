@@ -11,6 +11,12 @@ use std::io::{Cursor, Write as _};
 use zip::write::SimpleFileOptions;
 use zip::{CompressionMethod, ZipWriter};
 
+pub mod cache_key;
+pub mod generator_protocol;
+pub mod geometry;
+pub mod runtime;
+pub mod settings;
+
 pub const CAPABILITY_ID: &str = "bambu-studio.named-objects";
 pub const CAPABILITY_REVISION: u32 = 1;
 pub const SUPPORT_BLOCKING_VOLUMES_CAPABILITY_ID: &str = "bambu-studio.support-blocking-volumes";

@@ -22,3 +22,12 @@ their locked dependency graph. Some dependencies offer MIT as one choice in a
 dual-license expression; this project uses that choice. Exact versions and
 license facts are recorded in `provenance/bambu-studio/reviews/` and
 `Cargo.lock`.
+
+The Bambu protocol runtime adapts neutral MIT-licensed code and schemas from
+Onshape Export, Copyright (c) 2026 The Onshape Export Authors. The full upstream
+permission notice is retained in crates/bambu-studio/neutral/LICENSE-MIT.
+Runtime 3MF realization derives format facts from the same pinned Bambu Studio
+upstream. New dependency license selections also include Boost Software License
+1.0 (ryu-js), Unicode License v3 (unicode-ident, together with MIT), and zlib
+License (zlib-rs, Copyright (C) 2024 Trifecta Tech Foundation). Exact versions,
+source influence, and obligations are recorded in the protocol dependency review.
