@@ -37,6 +37,8 @@ jobs:
         run: cargo test --workspace
       - name: Check dependencies
         run: cargo deny check
+      - name: Check neutral deployment handoff
+        run: uv run --locked provenance/bambu-studio/handoffs/v0.1.0-v1/verify.py
       - name: Check workflows
         run: actionlint
       - name: Check shell scripts

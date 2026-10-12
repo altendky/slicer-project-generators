@@ -14,6 +14,10 @@ named release approval are documented in the
 [release records](provenance/bambu-studio/releases/v0.1.0/review.md).
 Service integration requires its separate approval.
 
+The [neutral deployment handoff](handoffs/bambu-studio/v0.1.0-v1/README.md)
+supplies all immutable bindings for the existing Bambu 0.1.0 package. The service
+adds its own executable path; generator-local verification stays in provenance.
+
 The Bambu command requires hash-bound package metadata and implements atomic
 candidate/result success with final target-aware self-validation. See
 [Bambu runtime](docs/src/project/bambu-protocol-v1.md). Orca and Prusa remain

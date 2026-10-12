@@ -1,0 +1,43 @@
+{
+  "documentType": "generatorDeploymentHandoffReleaseMetadata",
+  "existingReleaseTag": "bambu-studio-v0.1.0",
+  "files": {
+    "LICENSE-MIT-service": {
+      "byteLength": 1070,
+      "sha256": "9449ef5bf42aee9b245c1a639025ed2afec4afbcb9f6fd9949fceb97aeb21f91"
+    },
+    "deployed-generator.schema.json": {
+      "byteLength": 1957,
+      "sha256": "2af98b181a53c1a8c26b51d95bc974561871c2f913bb37e8275f5c3fe47f2b90"
+    },
+    "handoff.json": {
+      "byteLength": 4644,
+      "sha256": "8547eae6e1d9378040922972ab9c9bc4561d54afb9c0ba9e3e7305e320eeb40f"
+    },
+    "handoff.schema.json": {
+      "byteLength": 10329,
+      "sha256": "e630b0d81c9c7861dd577437c7adcd0905b90d3f8dda2c26ec314146fd3e7171"
+    },
+    "handoff.sha256": {
+      "byteLength": 79,
+      "sha256": "93ffa853a07881e54487eed19e7205a07aef7b324c7b6a5ed0b76a7674a5a16c"
+    }
+  },
+  "metadataVersion": 1,
+  "recordIdentity": "BBL-DEPLOYMENT-HANDOFF-v1",
+  "staticDeployedGeneratorIdentity": "fd088d4e2066db7de9a26436ad081f045f1fac472429f249d58f623b3c6f8beb",
+  "verificationConclusions": {
+    "boundedStructuredFailuresWithoutCandidates": true,
+    "completeRequestedReportedBindingsMatch": true,
+    "date": "2026-10-12",
+    "installedPackageUnchanged": true,
+    "newTargetCompatibilityClaim": false,
+    "officialNeutralSchemasAccepted": true,
+    "ordinaryFailureCases": 3,
+    "publishedArtifactsVerified": true,
+    "publishedExecutableSuccessCases": 5,
+    "serviceDeploymentApproved": false,
+    "serviceDocumentRequiresOnlyOwnExecutablePath": true
+  },
+  "verificationReportSha256": "0b67b09fdf4a48455ed48fc32d79724e2bc9099bff60bf2d7a883ca8886ddc28"
+}
