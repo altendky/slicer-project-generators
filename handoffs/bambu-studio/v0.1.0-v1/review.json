@@ -1,0 +1,34 @@
+{
+  "documentType": "generatorDeploymentHandoffReview",
+  "reviewVersion": 1,
+  "recordIdentity": "BBL-DEPLOYMENT-HANDOFF-REVIEW-v1",
+  "date": "2026-10-12",
+  "outcome": "approved-for-supplemental-metadata-publication",
+  "subjects": {
+    "handoffSha256": "8547eae6e1d9378040922972ab9c9bc4561d54afb9c0ba9e3e7305e320eeb40f",
+    "handoffSchemaSha256": "e630b0d81c9c7861dd577437c7adcd0905b90d3f8dda2c26ec314146fd3e7171",
+    "releaseMetadataSha256": "1874abee0bdc31d52812b47729e84e42ffee5b28ef26d1f88cfd6b527f205c72",
+    "verificationReportSha256": "0b67b09fdf4a48455ed48fc32d79724e2bc9099bff60bf2d7a883ca8886ddc28",
+    "packageSha256": "a9c859962d23de9812a28871fa6a80334b7543ab695b52db73ca2d91387c3d9c",
+    "correspondingSourceSha256": "bcc3c15220f739b9df9c6b5a6b2422c05ac4c126a37e2e8c5a8640b3184535ae",
+    "binarySha256": "734aa2340c954b7d06f1cea0d6c307b33279ffdd74b10cfe1639cdefc7e5e44c",
+    "descriptorSha256": "a93a499aa55a5096b2c0c264dd7db537e305148f664a9ed2253062cd7358d8c1"
+  },
+  "reviewers": [
+    {
+      "identity": "Codex /root/protocol_research",
+      "kind": "independent-agent-review",
+      "date": "2026-10-12",
+      "outcome": "approve"
+    },
+    {
+      "identity": "Codex /root/geometry_research",
+      "kind": "independent-agent-review",
+      "date": "2026-10-12",
+      "outcome": "approve"
+    }
+  ],
+  "originalReleaseBytesUnchanged": true,
+  "serviceDeploymentApproved": false,
+  "productionUseAuthorized": false
+}

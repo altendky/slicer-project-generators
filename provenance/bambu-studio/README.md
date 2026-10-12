@@ -50,6 +50,10 @@ capabilities and the protocol runtime to the exact package bytes.
 
 ## Current Gates
 
+The [Bambu 0.1.0 handoff supplement](handoffs/v0.1.0-v1/README.md) records the
+complete neutral deployment bindings and unchanged-published-executable proof.
+Its named review is separate from the preserved original release approval.
+
 The named-objects and support-blocking public-incorporation records are
 complete. The named release review records the 0.1.0 package decision.
 Service approval, deployment, cache use, generated-artifact publication and
